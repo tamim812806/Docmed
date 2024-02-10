@@ -1,0 +1,2016 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Contract Part Start */
+
+.contract{
+    width: 100%;
+    height: 50px;
+    background-color: #f5fbff;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contract div{
+    margin: auto 90px;
+    font-size: 18px;
+}
+
+.contract div > a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contract div:last-child i{
+    margin-left: 15px;
+}
+
+.contract div > a:hover{
+    color: #0099ff;
+}
+
+/* Contract Part End */
+
+
+/* Header Part Start */
+
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+
+header #check , .fa-bars{
+    display: none;
+}
+
+header div{
+    margin: auto;
+}
+
+header div ul{
+    display: flex;
+    margin-right: 225px;
+}
+
+header div ul a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+header div ul li{
+    padding: 20px;
+    list-style: none;
+}
+
+
+header div ul li ul{
+    position: absolute;
+    top: 80px;
+    display: none;
+    background-color: #eee;
+    width: 150px;
+    height: 125px;
+    border-radius: 5px;
+}
+
+header div ul li a:hover{
+    color: #0099ff;
+}
+
+
+header div ul li:hover ul{
+    display: block;
+}
+
+
+
+
+header div button{
+    padding: 12px 25px;
+    background-color: #0099ff;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 80px;
+    top: 25px;
+}
+
+header div button:hover{
+    background-color: #fff;
+    color: #0099ff;
+    border: 1px solid #0099ff;
+    border-radius: 5px;
+    transition: all linear 0.3s;
+}
+
+
+
+/* Header Part End */
+
+
+
+/* Section 1 Start */
+
+
+.section1{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(../img/xbanner2.png.pagespeed.ic.B9cM6-Ibkd.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.section1 div{
+    margin-left: 150px;
+    margin-top: 220px;
+}
+
+.section1 div h3{
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+
+
+span{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.section1 p{
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+
+.section1 div .service1btn{
+    padding: 12px 25px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #0099ff;
+    color: #fff;
+    cursor: pointer;
+    margin: 2px;
+
+}
+
+.section1 div .service1btn:hover{
+    background-color: #fff;
+    border: 1px solid #0099ff;
+    color: #0099ff;
+    transition: all ease 0.3s;
+}
+
+
+
+
+/* Section 1 End */
+
+
+
+
+
+/* Slider Part Start */
+
+
+
+
+
+#slider{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+}
+
+
+#slider input[type=radio] {
+    display: none;
+}
+
+#slider label{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+#slides{
+    position: relative;
+
+}
+
+.overflow{
+    width: 100%;
+    overflow: hidden;
+}
+
+
+#slide1:checked ~ #slides .sld{
+    margin-left: 0;
+}
+#slide2:checked ~ #slides .sld{
+    margin-left: -100%;
+}
+#slide3:checked ~ #slides .sld{
+    margin-left: -200%;
+}
+
+#slides .sld{
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    height: 600px;
+}
+
+
+
+
+#slides .slide{
+    width: 25%;
+    display: block;
+    float: left;
+    height: 100%;
+}
+
+#controls{
+    margin: -130px 0 0 0;
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+
+#controls label{
+    transition: opacity .2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .5;
+}
+
+
+#controls label:hover{
+    opacity: 1;
+}
+
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(1) {
+
+    background: url(../img/next_arrow.png) no-repeat center center;
+    float: right;
+    margin: -185px 20px 0 0;
+    display: block;
+    background-size: cover;
+
+}
+
+#slide3:checked ~ #controls label:nth-last-child(2),
+#slide2:checked ~ #controls label:nth-last-child(3),
+#slide1:checked ~ #controls label:nth-last-child(1) {
+
+    background: url(../img/prev_arrow.png) no-repeat center center;
+    float: left;
+    margin: -185px 0 0px 20px;
+    display: block;
+    background-size: cover;
+
+}
+
+
+#bullets{
+    margin: 100px 0 0;
+    text-align: center;
+}
+
+#bullets label{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 10px;
+    border-radius: 100%;
+}
+
+
+
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3) {
+    background-color: #000;
+}
+
+
+/* Slider Part End */
+
+
+
+
+
+/* Service Part Start */
+
+
+.service{
+    width: 100%;
+    height: 300px;
+    background-color: #42a7eb;
+    position: relative;
+    top: 20px;
+}
+
+
+.service .services {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.service .services .single_service{
+    color: #fff;
+    padding: 20px;
+}
+
+.services .single_service i{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+.services .single_service h3{
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.services .single_service p{
+    opacity: .9;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.services .single_service .service_btn{
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #42a7eb;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.single_service .service_btn:hover{
+    background-color: #fff;
+    color: #0099ff;
+    border: none;
+    transition: all linear .3s;
+}
+
+
+/* Service Part End */
+
+
+/* Welcome Part Start */
+
+
+.welcome_area{
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+    position: relative;
+    top: 150px;
+}
+
+.welcome_area .wlc{
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    position: relative;
+}
+
+.wlc .wlc_pic{
+    display: flex;
+}
+
+.wlc_pic .wlc2{
+    position: absolute;
+    left: 260px;
+    top: 95px;
+}
+
+
+.wlc .wlc_txt{
+    position: absolute;
+    right: -55px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+}
+
+.wlc_txt h4{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    border-bottom: #0099ff 1px solid;
+    display: inline-block;
+    font-weight: normal;
+}
+
+.wlc_txt h3{
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+
+
+.wlc_txt p{
+    width: 450px;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.wlc_txt ul{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.wlc_txt ul li{
+    color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 5px;
+
+}
+
+.wlc_txt ul li i{
+    color: #0099ff;
+}
+
+
+.wlc_txt .wlc_btn{
+    padding: 12px 20px;
+    font-size: 15px;
+    color: #0099ff;
+    border: 1px solid #0099ff;
+    border-radius: 5px;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+
+.wlc_txt .wlc_btn:hover{
+    background-color: #0099ff;
+    color: #fff;
+    border: none;
+    transition: all linear .3s;
+}
+
+
+/* Welcome Part End */
+
+
+/* Department Part Start */
+
+
+.department_area{
+    background-color: #F5FBFF;
+    position: relative;
+    width: 100%;
+    top: 150px;
+    padding-bottom: 150px;
+    height: 1100px;
+}
+
+.department_area .department{
+    width: 90%;
+    margin: auto;
+}
+
+.department .dpmt_txt{
+    text-align: center;
+    padding: 100px 0;
+    position: relative
+}
+
+.dpmt_txt h3{
+    font-size: 40px;
+    font-weight: normal;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    border-bottom: #0099ff 1px solid;
+}
+
+
+
+.dpmt_txt p{
+    width: 40%;
+    margin: 0 auto;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+}
+
+
+.department .row{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.row .dpmt_item{
+    padding: 10px;
+    position: relative;
+    width: 31%;
+}
+
+
+
+.dpmt_item .single_dpmt{
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.single_dpmt .dpmt_thumble{
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.dpmt_thumble img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.single_dpmt .dpmt_content{
+    margin: 20px 20px;
+}
+
+.dpmt_content h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.dpmt_content h4:hover{
+    color: #0099ff;
+    cursor: pointer;
+}
+
+
+.dpmt_content p{
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.dpmt_content a{
+    color: #0099ff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.dpmt_content a:hover{
+    text-decoration: underline;
+}
+
+.single_dpmt:hover{
+    background-color: #eee;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Department Part End */
+
+
+
+/* Testmonial part Start */
+
+
+
+.testmonial_area{
+    width: 100%;
+    height: 620px;
+    position: relative;
+    top: 150px;
+    background: url(../img/tromnaro.webp) center center no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: .8;
+    background-size: cover;
+    background-color: #F5FBFF;
+}
+
+.testmonial_area .testmonial_txt{
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.testmonial_txt span{
+    color: rgba(163, 163, 163, 0.9);
+    font-size: 150px;
+}
+
+.testmonial_txt p{
+    color: rgba(63, 63, 63, 0.9);
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.testmonial_txt h4{
+    font-weight: normal;
+    color: rgba(63, 63, 63, 0.9);
+    text-transform: uppercase;
+    margin-top: 50px;
+    display: inline-block;
+    padding-top: 10px;
+    border-top: 1px solid rgba(63, 63, 63, 0.9);
+}
+
+
+/* Testmonial part End */
+
+
+/* bisnuss Expart Part Start */
+
+
+.expart_area{
+    width: 100%;
+    position: relative;
+    top: 150px;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.expart_area .expart_tab{
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.expart_tab input{
+    display: none;
+}
+
+.expart_tab nav{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background-color: #F5FBFF;
+}
+
+
+.expart_tab nav > label{
+    width: 32.99999999999999%;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+
+#Excellent_Services:checked ~ nav label .Excellent_Services,
+#Qualified_Doctors:checked ~ nav label .Qualified_Doctors,
+#Emergency_Departments:checked ~ nav label .Emergency_Departments {
+    color: #0099ff;
+}
+
+
+.expart_tab nav .slider{
+    position: absolute;
+    height: 4.5px;
+    background-color: #0099ff;
+    border-radius: 20px;
+    width: 32.99999999999999%;
+    transition: all linear 0.3s;
+}
+
+#Excellent_Services:checked ~ nav .slider{
+    left: 0;
+}
+
+#Qualified_Doctors:checked ~ nav .slider{
+    left: 33.3%;
+}
+#Emergency_Departments:checked ~ nav .slider{
+    left: 66.5%;
+}
+
+
+#Qualified_Doctors:checked ~ nav .Qualified_Doctors{
+    color: #0099ff;
+    background-color: #fff;
+}
+
+
+#Emergency_Departments:checked ~ nav .Emergency_Departments{
+    color: #0099ff;
+    background-color: #fff;
+}
+
+
+#Excellent_Services:checked ~ nav .Excellent_Services{
+    color: #0099ff;
+    background-color: #fff;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content{
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+}
+
+.container .txt{
+    margin: 20px;
+}
+
+
+.container .txt i{
+    margin: 10px;
+    font-size: 50px;
+    padding: 15px;
+    background-color: #0099ff;
+    color: #fff;
+    border-radius: 50%;
+}
+
+
+.container .txt h3{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.container .txt p{
+    margin-top: 20px;
+    opacity: 0.5;
+}
+
+
+
+/* bisnuss Expart Part End */
+
+
+/* Expart Doctors Part Start */
+
+
+.expart_doctor_area{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 350px;
+    padding-bottom: 100px;
+
+}
+
+.expart_doctor_area .expart_doctors{
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.expart_doctors .expart_dctr_title h3{
+    font-size: 45px;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+
+.expart_doctors .expart_dctrs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.expart_dctrs .single_dctr{
+    margin: 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    background-color: #F5FBFF;
+    border-radius: 5px;
+}
+
+
+.single_dctr .single_dctr_tub{
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.single_dctr .single_dctr_content{
+    margin: 20px 0;
+    position: relative;
+}
+
+.single_dctr_content h3{
+    font-weight: normal;
+    font-size: 20px;
+    word-spacing: 5px;
+}
+
+.single_dctr_content span{
+    font-size: 15px;
+    line-height: 2;
+    opacity: .8;
+    font-weight: normal;
+}
+
+
+.single_dctr:hover{
+    color: #fff;
+    background-color: #42a7eb;
+    transition: all linear .3s;
+}
+
+.single_dctr:hover .single_dctr_tub img{
+    transform: scale(1.15);
+    transition: all linear .3s;
+}
+
+
+/* Expart Doctors Part End */
+
+
+
+/* Emergecy Part Start */
+
+
+.emergency_contract_area{
+    width: 100%;
+    position: relative;
+    top: 350px;
+}
+
+.emergency_contract_area .emgy_cntrc{
+    display: flex;
+    position: relative;
+}
+
+
+.emergency_contract_area .item{
+    width: 50%;
+    height: 250px;
+    position: relative;
+}
+
+
+
+.emergency_contract_area .item-1-bg{
+    width: 100%;
+    height: 250px;
+    background: url(../img/xemergency-1.png.pagespeed.ic.dzkR_tLkpJ.webp) no-repeat center center;
+    background-size: cover;
+}
+
+
+.emergency_contract_area .item-2-bg{
+    width: 100%;
+    height: 250px;
+    background: url(../img/xemergency-2.png.pagespeed.ic.Db7myp6yIE.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.overly{
+    background-color: #42a7eba8;
+    height: 250px;
+    position: relative;
+    display: flex;
+}
+
+.overly .info{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 65%;
+    height: fit-content;
+    margin: 0 10px;
+    color: #fff;
+}
+
+.info h4{
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.info p{
+    margin-top: 10px;
+    opacity: .7;
+}
+
+.info_btn{
+    width: fit-content;
+    height: fit-content;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    padding: 12px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+}
+
+.info_btn:hover{
+    background-color: #fff;
+    color: #0099ff;
+    transition: all linear .3s;
+}
+
+
+
+/* Emergecy Part End */
+
+
+/* Footer Part Start */
+
+
+footer{
+    position: relative;
+    top: 500px;
+    width: 100%;
+    height: 480px;
+    background-color: #1f1f1f;
+}
+
+
+.footer-top{
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+}
+
+.container-2{
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-top .container-2 .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.row .single-ftr{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    width: 252px;
+    height: 140px;
+}
+
+.single-ftr h3 , img{
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+
+.single-ftr p, li, li > a{
+    list-style: none;
+    line-height: 25px;
+    color: #c7c7c7;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.single-ftr i{
+    padding:18px;
+    background-color: #707070;
+    margin: 5px;
+    border-radius: 5px;
+    color: #eeeeee93;
+}
+
+.single-ftr i:hover,a:hover{
+    color: #42a7eb;
+}
+
+footer .copyright{
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: #42a7eb;
+    font-size: 20px;
+}
+
+/* Footer Part End */
+
+
+
+
+/* Responsive Part Start */
+
+
+/* Normal desktop :1366px. */
+/* Laptop Device :992px. */
+/* Tablet desktop :768px. */
+/* Large Mobile :480px. */
+/* small mobile :320px. */
+
+
+
+/* Mobile Device Start */
+
+@media (max-width:768px) {
+
+    .contract{
+        display: block;
+        width: 100%;
+        height: 100px;
+    }
+
+
+    .contract div:first-child{
+        position: relative;
+        padding: 15px;
+    }
+
+    .contract div:last-child{
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+
+    /* Header Part Start */
+
+    header .logo{
+        margin-left: 40px;
+    }
+
+    header div button{
+        display: none;
+    }
+
+    header .nav{
+        width: 100%;
+        position: relative;
+        left: -100px;
+        top: -500px;
+
+        overflow: hidden;
+    }
+
+
+
+    header .nav ul{
+        display: block;
+        width: 100%;
+        margin: 0;
+        background-color: #4c4c4c;
+    }
+
+    .nav ul li{
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .nav ul li a{
+        color: #eee;
+    }
+
+    .nav ul li:hover{
+        background-color: #cecacad2;
+    }
+
+    /* Hidden Item */
+
+    .nav ul li ul, .nav ul li ul li, header #check, .fa-arrow-circle-down{
+        display:none;
+        height: 0px;
+        width: 0px;
+    }
+
+    /* End */
+
+    header .fa-bars{
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 40px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    header .fa-bars:hover{
+        color: #0099ff;
+    }
+
+
+    #check:checked ~ .nav{
+        top: 60px;
+        transition: all ease .1s;
+    }
+
+
+    /* Header Part End */
+
+    /* Section-1 Start */
+
+    .section1{
+        height: 245px;
+    }
+
+    .section1 div{
+        margin: 15px;
+    }
+
+    .section1 div h3 {
+        font-size: 1.5rem;
+    }
+
+    span{
+        font-size: 2rem;
+    }
+
+
+    .section1 p{
+        word-wrap: wrap;
+        width: 70%;
+    }
+
+    .section1 div .service1btn{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    #slide3:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide1:checked ~ #controls label:nth-last-child(1) {
+        display: none;
+    }
+
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(1) {
+        display: none;
+    }
+
+    #controls, #bullets{
+        display: none;
+    }
+
+
+    /* Section-1 End */
+
+
+    /* Service Part Start */
+
+    .service {
+        top: -405px;
+        height: 800px;
+    }
+
+    .service .services{
+        display: block;
+        top: 25px;
+        transform: translateY(0);
+        width: 90%;
+    }
+
+    .service .services .single_service{
+        margin-top: 50px;
+    }
+
+    .services .single_service .service_btn {
+        position: absolute;
+    }
+
+
+    /* Service Part End */
+
+
+    /* Welcome Part Start */
+
+
+    .welcome_area{
+        top: -400px;
+        height: auto;
+    }
+
+
+    .welcome_area .wlc {
+        width: 90%;
+        display: block;
+        top: 50px;
+    }
+
+    .wlc .wlc_pic {
+        display: flex;
+        width: 100%;
+    }
+
+
+    .wlc_pic .wlc2 {
+        display: none;
+    }
+
+    .wlc .wlc_txt{
+        top: 500px;
+        transform: translateY(0);
+        right: auto;
+    }
+
+    .wlc_txt p {
+        width: 100%;
+    }
+
+    .wlc_txt h3{
+        font-size: 25px;
+    }
+
+    /* Welcome Part End */
+
+
+    /* Department Part Start */
+
+    .department_area {
+        top: 100px;
+        height: auto;
+    }
+
+    .dpmt_txt h3{
+        font-size: 25px;
+    }
+
+    .dpmt_txt p{
+        width: 85%;
+    }
+
+    .department .row{
+        display: block;
+    }
+
+
+    .row .dpmt_item{
+        width: 100%;
+    }
+
+    .dpmt_item .single_dpmt{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Department Part End */
+
+    /* Testmonial Part Start */
+
+
+    .testmonial_area .testmonial_txt{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .testmonial_area{
+        top: 100px;
+    }
+
+    /* Testmonial Part End */
+
+
+    /* Busniess Exparrt Part Start */
+
+
+    .expart_tab nav{
+        display: none;
+    }
+
+    .container{
+        width: 90%;
+        top: -50px;
+    }
+
+    .container .content{
+        display: block;
+    }
+
+    .images{
+        width: 95%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    /* Busniess Expart Part End */
+
+    /* Expart Doctor Part Start */
+
+    .expart_doctor_area{
+        top: 180px;
+    }
+
+
+    .expart_doctor_area .expart_doctors{
+        width: 95%;
+    }
+
+
+    .expart_doctors .expart_dctrs{
+        flex-direction: column;
+    }
+
+
+    .expart_doctors .expart_dctr_title h3{
+        font-size: 25px;
+        margin-left: 40px;
+    }
+
+
+    /* Expart Doctor Part End */
+
+
+    /* Emergency Part Start */
+
+    .emergency_contract_area{
+        top: 150px;
+    }
+
+    .emergency_contract_area .emgy_cntrc{
+        display: block;
+    }
+
+    .emergency_contract_area .item{
+        width: 100%;
+    }
+
+    .overly .info{
+        width: 80%;
+        margin-left: 20px;
+        top: 100px;
+    }
+
+    .info_btn{
+        top: 190px;
+        left: 120px;
+        font-size: 10px;
+    }
+
+    .info h4{
+        font-size: 18px;
+    }
+
+
+    .info p{
+        font-size: 13px;
+        letter-spacing: .5px;
+    }
+
+
+    /* Emergency Part End */
+
+
+    /* Footer Part Start */
+
+    footer{
+        height: auto;
+        top: 150px;
+    }
+
+    .footer-top .container-2 .row{
+        display: block;
+    }
+
+    .row .single-ftr{
+        width: 95%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+
+    footer .copyright{
+        font-size: 12px;
+    }
+
+    footer .copyright a{
+        font-size: 15px;
+    }
+
+
+    /* Footer Part End */
+
+}
+
+
+/* Mobile Device End */
+
+
+/* Laptop Device Start */
+
+@media (min-width:769px) and (max-width:992px) {
+
+    /* Header Part Start */
+
+    header .logo{
+        margin-left: 40px;
+    }
+
+    header div button{
+        display: flex;
+        margin-right: 20px;
+    }
+
+    header .nav{
+        width: 100%;
+        position: relative;
+        left: -100px;
+        top: -500px;
+
+        overflow: hidden;
+    }
+
+
+
+    header .nav ul{
+        display: block;
+        width: 100%;
+        margin: 0;
+        background-color: #4c4c4c;
+    }
+
+    .nav ul li{
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .nav ul li a{
+        color: #eee;
+    }
+
+    .nav ul li:hover{
+        background-color: #cecacad2;
+    }
+
+    /* Hidder Item */
+
+    .nav ul li ul, .nav ul li ul li, header #check, .fa-arrow-circle-down{
+        display:none;
+        height: 0px;
+        width: 0px;
+    }
+
+    /* End */
+
+    header .fa-bars{
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 40px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    header .fa-bars:hover{
+        color: #0099ff;
+    }
+
+
+    #check:checked ~ .nav{
+        top: 60px;
+        transition: all ease .1s;
+    }
+
+    /* Header Part End */
+
+
+    /* Section 1 Start */
+
+    .section1{
+        background-size: 100%;
+    }
+
+    .section1 div {
+        margin-left: 130px;
+        margin-top: 15px;
+    }
+
+    #slide3:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide1:checked ~ #controls label:nth-last-child(1) {
+        margin: -350px 20px 0 0;
+    }
+
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(1) {
+        margin: -350px 0 0 20px;
+    }
+
+    #bullets{
+        display: none;
+    }
+
+    /* Sectio 1 End */
+
+    /* Service Part Start */
+
+    .service{
+        top: -250px;
+    }
+
+    .service .services{
+        width: 95%;
+    }
+
+    /* Service Part End */
+
+
+    /* Welcome Part Start */
+
+    .welcome_area{
+        height: 720px;
+        top: -200px;
+    }
+
+    .welcome_area .wlc{
+        width: 90%;
+        display: block;
+    }
+
+    .wlc .wlc_txt{
+        transform: none;
+        left: 0;
+        margin-top: 100px;
+        top: auto;
+    }
+
+    /* Welcome Part End */
+
+    /* Department Part Start */
+
+    .department_area{
+        height: 1530px;
+    }
+
+    .department_area .department{
+        width: 90%;
+        position: relative;
+    }
+
+    .row .dpmt_item{
+        width: 46%;
+    }
+
+    .dpmt_item .single_dpmt{
+        width: 100%;
+        height: auto;
+    }
+
+    .single_dpmt .dpmt_thumble{
+        width: 100%;
+    }
+
+
+    .dpmt_thumble img{
+        top: 45%;
+        width: 100%;
+    }
+
+    /* Department Part End */
+
+
+    /* Busniess Expart Part Start */
+
+    .expart_tab nav > label{
+        width: 32.9%;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .container .content{
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .container .txt, .images{
+        width: 50%;
+    }
+
+    .images img {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Busniess Expart Part End */
+
+    /* Expart Doctor Part Start */
+
+
+    .expart_doctor_area{
+        top: 220px;
+    }
+
+
+    .expart_doctor_area .expart_doctors{
+        width: 95%;
+    }
+
+    .expart_doctors .expart_dctrs{
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+
+    /* Expart Doctor Part End */
+
+    /* Emergency Part Start */
+
+    .emergency_contract_area{
+        top: 220px;
+    }
+
+    .emergency_contract_area .emgy_cntrc{
+        display: block;
+    }
+
+    .emergency_contract_area .item{
+        width: 100%;
+    }
+
+    /* Emergency Part End */
+
+
+    /* Footer Part Start */
+
+    footer{
+        top: 220px;
+    }
+
+    .container-2{
+        width: 95%;
+    }
+
+    .single-ftr h3, img{
+        font-size: 22px;
+    }
+
+    /* Footer Part End */
+
+
+}
+
+/* Laptop Device End */
+
+
+/* Other Device Start */
+
+@media (min-width:993px) and (max-width:1200px) {
+
+    /* Header Part Start */
+
+    header .logo{
+        margin-left: 40px;
+    }
+
+    header div button{
+        display: flex;
+        margin-right: 20px;
+    }
+
+    header .nav{
+        width: 100%;
+        position: relative;
+        left: -100px;
+        top: -500px;
+
+        overflow: hidden;
+    }
+
+
+
+    header .nav ul{
+        display: block;
+        width: 100%;
+        margin: 0;
+        background-color: #4c4c4c;
+    }
+
+    .nav ul li{
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .nav ul li a{
+        color: #eee;
+    }
+
+    .nav ul li:hover{
+        background-color: #cecacad2;
+    }
+
+    /* Hidden Item */
+
+    .nav ul li ul, .nav ul li ul li, header #check, .fa-arrow-circle-down{
+        display:none;
+        height: 0px;
+        width: 0px;
+    }
+
+    /* End */
+
+    header .fa-bars{
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 40px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    header .fa-bars:hover{
+        color: #0099ff;
+    }
+
+
+    #check:checked ~ .nav{
+        top: 60px;
+        transition: all ease .1s;
+    }
+
+    /* Header Part End */
+
+    /* Section 1 Start */
+
+    .section1{
+        background-size: 120%;
+    }
+
+
+    .section1 div {
+        margin-left: 130px;
+        margin-top: 100px;
+    }
+
+
+
+    #slide3:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide1:checked ~ #controls label:nth-last-child(1) {
+        margin: -135px 20px 0 0;
+    }
+
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(1) {
+        margin: -135px 0 0 20px;
+    }
+
+
+    #slide1:checked ~ #slides .sld{
+        height: 440px;
+    }
+    #slide2:checked ~ #slides .sld{
+        height: 440px;
+    }
+    #slide3:checked ~ #slides .sld{
+        height: 440px;
+    }
+
+
+    /* Section 1 End */
+
+
+    /* Welcome Part Start */
+
+    .welcome_area{
+        height: 920px;
+        top: 50px;
+    }
+
+    .welcome_area .wlc{
+        width: 90%;
+        display: block;
+    }
+
+    .wlc .wlc_txt{
+        margin-top: 100px;
+        top: auto;
+        position: relative;
+        left: 40%;
+        transform: translateX(-25%);
+        width: fit-content;
+    }
+
+
+
+    .wlc .wlc_pic {
+        display: flex;
+        width: 60%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Welcome Part End*/
+
+
+
+    /* Department Part Start */
+
+    .department_area{
+        height: 1530px;
+    }
+
+    .department_area .department{
+        width: 90%;
+        position: relative;
+    }
+
+    .row .dpmt_item{
+        width: 46%;
+    }
+
+    .dpmt_item .single_dpmt{
+        width: 100%;
+        height: auto;
+    }
+
+    .single_dpmt .dpmt_thumble{
+        width: 100%;
+    }
+
+
+    .dpmt_thumble img{
+        top: 45%;
+        width: 100%;
+    }
+
+    /* Department Part End */
+
+
+    /* Busniess Expart Part Start */
+
+    .expart_tab nav > label{
+        width: 32.9%;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .container .content{
+        position: relative;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .container .txt, .images{
+        width: 50%;
+    }
+
+    .images img {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    /* Busniess Expart Part End */
+
+
+    /* Expart Doctor Part Start */
+
+    .expart_doctor_area{
+        top: 220px;
+    }
+
+
+    .expart_doctor_area .expart_doctors{
+        width: 95%;
+    }
+
+    .expart_doctors .expart_dctrs{
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+
+    /* Expart Doctor Part End */
+
+    /* Emergency Part Start */
+
+    .emergency_contract_area{
+        top: 220px;
+    }
+
+    .emergency_contract_area .emgy_cntrc{
+        display: block;
+    }
+
+    .emergency_contract_area .item{
+        width: 100%;
+    }
+
+    /* Emergency Part End */
+
+
+    /* Footer Part Start */
+
+    footer{
+        top: 220px;
+    }
+
+    .container-2{
+        width: 95%;
+    }
+
+    .single-ftr h3, img{
+        font-size: 22px;
+    }
+
+    /* Footer Part End */
+
+
+}
+
+/* Other Device End */
+
+
+/* Responsive Part End */
